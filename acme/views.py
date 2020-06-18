@@ -3,7 +3,7 @@ from django.views.defaults import page_not_found
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'pages/home.html')
 
 
 def about(request):

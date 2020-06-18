@@ -4,8 +4,9 @@
     <h1>Index {{ posts|length }} articles</h1>
 
     {% for post in posts %}
-        <article>
+        <article class="content-section">
             <h2>#{{ post.id }} <a href="{% url 'blog:blog-post' post.id  %}">{{ post.title|upper }}</a></h2>
+            <p>{{ post.created_at|timesince }}</p>
             <p>{{ post.content|truncatewords:4 }}</p>
             <a href="{% url 'blog:blog-post' post.id %}">lire la suite</a>
         </article>
