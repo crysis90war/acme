@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <article>
+        <h1>#{{ post.id }} - {{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+    </article>
+
+    <a class="btn btn-primary btn-lg" href="{% url 'blog:blog-home' %}">Retour</a>
+{% endblock %}
